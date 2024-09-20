@@ -1,0 +1,6 @@
+{
+  "title": "Carne Mock 1",
+  "ingredients": ["Ingrediente 1", "Ingrediente 2", "Ingrediente 3"],
+  "steps": ["Passo 1", "Passo 2"],
+  "notes": "Uma receita rápida para o dia-a-dia."
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Carne Mock 2 with a Very Long Title for Testing Layout Consistency Across Different Card Designs",
+  "ingredients": ["Ingrediente 1", "Ingrediente 2", "Ingrediente 3", "Ingrediente 4", "Ingrediente 5", "Ingrediente 6"],
+  "steps": ["Passo 1", "Passo 2", "Passo 3"],
+  "notes": "Esta receita demonstra como títulos extremamente longos são geridos pelo sistema de layout, garantindo que o design editorial se mantém estável."
+}

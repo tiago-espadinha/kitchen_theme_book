@@ -1,0 +1,6 @@
+{
+  "title": "Receita Geral Mock 2 para Verificar se o Layout Centrado Funciona Corretamente",
+  "ingredients": ["Item A", "Item B", "Item C", "Item D"],
+  "steps": ["Passo A", "Passo B"],
+  "notes": "Nota de teste para verificar o alinhamento de blocos de texto maiores dentro dos modais de todas as variantes de design."
+}
