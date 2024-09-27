@@ -1,0 +1,40 @@
+#app-header {
+  background: var(--ink);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--amber);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  height: 72px;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.logo span {
+  color: var(--amber);
+  font-style: italic;
+}
+
+.header-tagline {
+  font-family: "Crimson Pro", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(247, 241, 232, 0.5);
+  letter-spacing: 0.08em;
+}

@@ -1,0 +1,173 @@
+@import "components/AppHeader/AppHeader.css";
+@import "components/AppFooter/AppFooter.css";
+
+:root {
+  --cream: #f7f1e8;
+  --warm-white: #fdf9f3;
+  --ink: #1a1208;
+  --brown: #5c3a1e;
+  --amber: #c8862a;
+  --rust: #b85c2a;
+  --sage: #7a8c6a;
+  --dust: #ccb9a4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Crimson Pro", Georgia, serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  background: var(--ink);
+  padding: 5rem 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse,
+    rgba(200, 134, 42, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text h1 em {
+  color: var(--amber);
+  font-style: italic;
+  display: block;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: rgba(247, 241, 232, 0.65);
+  line-height: 1.75;
+  max-width: 420px;
+  font-style: italic;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--amber);
+  display: block;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(247, 241, 232, 0.5);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.hero-ornament {
+  text-align: center;
+  padding: 2rem;
+}
+
+.ornament-circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--amber) 0%,
+    var(--rust) 60%,
+    var(--brown) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  font-size: 8rem;
+}
+
+.ornament-circle::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 134, 42, 0.3);
+}
+
+.ornament-circle::after {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 134, 42, 0.15);
+}
+
+/* RECIPE GRID */
+.recipes-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2px;
+  background: var(--dust);
+  border: 2px solid var(--dust);
+}
+
+/* DIVIDER */
+.ornamental-divider {
+  text-align: center;
+  padding: 1rem 0 1rem;
+  color: var(--amber);
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+}

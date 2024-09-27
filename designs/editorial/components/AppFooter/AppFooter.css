@@ -1,0 +1,12 @@
+#app-footer {
+  background: var(--ink);
+  color: rgba(247, 241, 232, 0.4);
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+#app-footer span {
+  color: var(--amber);
+}
