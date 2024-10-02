@@ -1,0 +1,50 @@
+<section class="category-section">
+  <div class="section-header"><h2>Categorias & Pesquisa</h2></div>
+  <div class="filter-container">
+    <div class="categories">
+      <button
+        class="cat-btn active"
+        data-category="all"
+        onclick="filterRecipes('all', this)"
+      >
+        Todas
+      </button>
+      <button
+        class="cat-btn"
+        data-category="carne"
+        onclick="filterRecipes('carne', this)"
+      >
+        🥩 Carne
+      </button>
+      <button
+        class="cat-btn"
+        data-category="peixe"
+        onclick="filterRecipes('peixe', this)"
+      >
+        🐟 Peixe
+      </button>
+      <button
+        class="cat-btn"
+        data-category="sobremesa"
+        onclick="filterRecipes('sobremesa', this)"
+      >
+        🍮 Sobremesa
+      </button>
+      <button
+        class="cat-btn"
+        data-category="geral"
+        onclick="filterRecipes('geral', this)"
+      >
+        🍲 Geral
+      </button>
+    </div>
+    <div class="search-box">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Pesquisar receitas..."
+        oninput="handleSearch(this.value)"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+.recipe-card {
+  background: var(--warm-white);
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipe-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--amber);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover::before {
+  transform: scaleX(1);
+}
+
+.recipe-card:hover {
+  background: #fffdf8;
+  z-index: 1;
+  box-shadow: 0 8px 40px rgba(26, 18, 8, 0.12);
+}
+
+.card-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.8rem;
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  min-height: 3.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  overflow: hidden;
+  align-content: center;
+}
+
+.card-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+  color: rgba(26, 18, 8, 0.5);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--dust);
+}
+
+.card-ingredients-preview {
+  font-size: 0.9rem;
+  color: rgba(26, 18, 8, 0.6);
+  line-height: 1.6;
+  margin-top: auto;
+  min-height: 2.88rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  overflow: hidden;
+  align-content: center;
+}
+
+.card-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--rust);
+  font-weight: 600;
+}
+
+.card-cta::after {
+  content: "→";
+  font-size: 1.8rem;
+  margin-top: -0.6rem;
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover .card-cta::after {
+  transform: translateX(4px);
+}

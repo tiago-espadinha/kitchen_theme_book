@@ -1,5 +1,7 @@
 @import "components/AppHeader/AppHeader.css";
 @import "components/AppFooter/AppFooter.css";
+@import "components/FilterBar/FilterBar.css";
+@import "components/RecipeCard/RecipeCard.css";
 
 :root {
   --cream: #f7f1e8;
