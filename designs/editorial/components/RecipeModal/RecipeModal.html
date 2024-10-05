@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <div class="modal-category">{{emoji}} {{category}}</div>
+  <h2 class="modal-title">{{title}}</h2>
+  <button class="modal-close" onclick="closeModal()">✕</button>
+</div>
+
+<div class="modal-body">
+  <div>
+    <div class="modal-section-title">Ingredientes</div>
+    <ul class="ingredients-list">
+      {{ingredientsLI}}
+    </ul>
+  </div>
+  <div>
+    <div class="modal-section-title">Preparação</div>
+    <ol class="steps-list">
+      {{stepsLI}}
+    </ol>
+  </div>
+  {{notesHTML}}
+</div>
