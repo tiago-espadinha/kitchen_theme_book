@@ -153,3 +153,20 @@ export const ComponentLoader = {
     container.innerHTML = html;
   },
 };
+
+/**
+ * Common style switcher logic.
+ */
+function initStyleSwitcher(currentStyle) {
+  const switcher = document.querySelector(".style-switcher");
+  if (!switcher) return;
+
+  // Highlight active style
+  const buttons = switcher.querySelectorAll("button");
+  buttons.forEach((btn) => {
+    const onclick = btn.getAttribute("onclick") || "";
+    if (onclick.includes(currentStyle)) {
+      btn.style.fontWeight = "bold";
+    }
+  });
+}

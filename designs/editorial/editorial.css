@@ -3,6 +3,7 @@
 @import "components/FilterBar/FilterBar.css";
 @import "components/RecipeCard/RecipeCard.css";
 @import "components/RecipeModal/RecipeModal.css";
+@import "components/StyleSwitcher/StyleSwitcher.css";
 
 :root {
   --cream: #f7f1e8;
