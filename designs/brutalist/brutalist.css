@@ -1,0 +1,167 @@
+@import "components/AppHeader/AppHeader.css";
+@import "components/AppFooter/AppFooter.css";
+@import "components/FilterBar/FilterBar.css";
+@import "components/RecipeCard/RecipeCard.css";
+@import "components/RecipeModal/RecipeModal.css";
+@import "components/StyleSwitcher/StyleSwitcher.css";
+:root {
+  --black: #0a0a0a;
+  --white: #f0ede8;
+  --yellow: #e8d500;
+  --grid: rgba(240, 237, 232, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: "DM Mono", monospace;
+  min-height: 100vh;
+  /* cursor: crosshair; */
+}
+
+/* GRID BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  border-bottom: 3px solid var(--white);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero-left {
+  padding: 4rem 4rem 4rem 2rem;
+  border-right: 3px solid var(--white);
+}
+
+.hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: var(--red);
+}
+
+.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.hero-title .accent {
+  color: var(--yellow);
+  -webkit-text-stroke: 0px;
+  display: block;
+}
+
+.hero-title .outline {
+  -webkit-text-stroke: 2px var(--white);
+  color: transparent;
+  display: block;
+}
+
+.hero-sub {
+  font-size: 0.8rem;
+  line-height: 2;
+  color: rgba(240, 237, 232, 0.5);
+  margin-top: 2rem;
+  max-width: 400px;
+  letter-spacing: 0.04em;
+}
+
+.hero-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-stat {
+  border: 1px solid rgba(240, 237, 232, 0.1);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hero-stat-num {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--yellow);
+}
+
+.hero-stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(240, 237, 232, 0.4);
+  margin-top: 0.5rem;
+}
+
+.hero-stat:nth-child(1) {
+  border-top: none;
+  border-left: none;
+}
+.hero-stat:nth-child(2) {
+  border-top: none;
+  border-right: none;
+}
+.hero-stat:nth-child(3) {
+  border-bottom: none;
+  border-left: none;
+}
+.hero-stat:nth-child(4) {
+  border-bottom: none;
+  border-right: none;
+}
+
+/* RECIPE GRID */
+.main-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(240, 237, 232, 0.1);
+}

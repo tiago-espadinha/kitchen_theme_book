@@ -1,0 +1,38 @@
+.style-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 15px;
+  border: 3px solid var(--yellow);
+  background: var(--black);
+  color: var(--white);
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+}
+
+.switcher-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: var(--yellow);
+}
+
+.switcher-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.switcher-buttons button {
+  /* cursor: crosshair; */
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+.switcher-buttons button.active {
+  background: var(--yellow);
+  color: var(--black);
+}

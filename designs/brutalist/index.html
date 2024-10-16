@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COZINHA BRUTA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/designs/brutalist/brutalist.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="app-header"></header>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="hero-eyebrow">VOL. 01 — RECEITAS DA CASA</div>
+          <h1 class="hero-title">
+            <span class="accent">COZI</span>
+            <span>NHA</span>
+            <span class="outline">BASI</span>
+            <span class="outline">CA</span>
+          </h1>
+          <p class="hero-sub">
+            // RECEITAS_TRADICIONAIS.PT — ARQUIVO DE SABORES PORTUGUESES.
+            SIMPLES. DIRETO. SEM FLOREADOS.
+          </p>
+        </div>
+        <div class="hero-right">
+          <div class="hero-stat">
+            <div class="hero-stat-num">136</div>
+            <div class="hero-stat-label">Total Receitas</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">04</div>
+            <div class="hero-stat-label">Categorias</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">∞</div>
+            <div class="hero-stat-label">Sabor Garantido</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">PT</div>
+            <div class="hero-stat-label">Origem</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="filter-bar-container"></div>
+    <div id="style-switcher-container"></div>
+    <main>
+      <div id="recipe-grid" class="main-grid"></div>
+    </main>
+    <footer id="app-footer"></footer>
+    <div class="modal-overlay" id="modal">
+      <div class="modal-backdrop" onclick="closeModal()"></div>
+      <div class="modal" id="modal-content"></div>
+    </div>
+    <script type="module" src="/designs/brutalist/brutalist.js"></script>
+  </body>
+</html>
