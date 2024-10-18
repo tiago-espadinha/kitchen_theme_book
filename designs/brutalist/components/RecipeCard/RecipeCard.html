@@ -1,0 +1,21 @@
+<div
+  class="recipe-card brutalist"
+  data-index="{{displayIndex}}"
+  onclick="openModal({{idx}})"
+>
+  <div class="card-cat-tag">{{categoryUpper}}</div>
+  <h3 class="card-title">{{title}}</h3>
+  <div class="card-divider"></div>
+  <div class="card-info">
+    <div class="info-block">
+      <span class="info-num">{{ingredientsCount}}</span>
+      <span class="info-label">Ingred.</span>
+    </div>
+    <div class="info-block">
+      <span class="info-num">{{stepsCount}}</span>
+      <span class="info-label">Passos</span>
+    </div>
+  </div>
+  <div class="card-ingredients">{{ingredientsPreviewSlash}}</div>
+  <div class="card-action">ABRIR RECEITA</div>
+</div>

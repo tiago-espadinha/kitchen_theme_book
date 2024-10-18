@@ -1,0 +1,48 @@
+<div class="categories-bar">
+  <div class="filter-controls">
+    <span class="cat-label">FILTRAR //</span>
+    <button
+      class="cat-btn active"
+      data-category="all"
+      onclick="filterRecipes('all', this)"
+    >
+      TODAS
+    </button>
+    <button
+      class="cat-btn"
+      data-category="carne"
+      onclick="filterRecipes('carne', this)"
+    >
+      CARNE
+    </button>
+    <button
+      class="cat-btn"
+      data-category="peixe"
+      onclick="filterRecipes('peixe', this)"
+    >
+      PEIXE
+    </button>
+    <button
+      class="cat-btn"
+      data-category="sobremesa"
+      onclick="filterRecipes('sobremesa', this)"
+    >
+      SOBREMESA
+    </button>
+    <button
+      class="cat-btn"
+      data-category="geral"
+      onclick="filterRecipes('geral', this)"
+    >
+      GERAL
+    </button>
+  </div>
+  <div class="search-wrap">
+    <span class="cat-label">BUSCA //</span>
+    <input
+      type="text"
+      placeholder="PESQUISAR..."
+      oninput="handleSearch(this.value)"
+    />
+  </div>
+</div>
