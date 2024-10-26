@@ -1,0 +1,156 @@
+@import "components/AppHeader/AppHeader.css";
+@import "components/AppFooter/AppFooter.css";
+@import "components/FilterBar/FilterBar.css";
+@import "components/RecipeCard/RecipeCard.css";
+@import "components/RecipeModal/RecipeModal.css";
+@import "components/StyleSwitcher/StyleSwitcher.css";
+
+:root {
+  --bg: #fdfaf6;
+  --card-1: #fff0e6;
+  --card-2: #e8f4f0;
+  --card-3: #f0ebf8;
+  --card-4: #fff8e6;
+  --peach: #ff8c60;
+  --teal: #4cbfa0;
+  --lavender: #9b7fd4;
+  --butter: #f5c842;
+  --text: #2d2a27;
+  --text-soft: #7a7470;
+  --white: #ffffff;
+  --shadow: rgba(45, 42, 39, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(135deg, #fff6ee 0%, #f0f8f5 50%, #f5f0fb 100%);
+}
+
+.hero::before {
+  content: "🍋";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 3rem;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+  content: "🌿";
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  font-size: 2.5rem;
+  opacity: 0.6;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.shape-1 {
+  top: -100px;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 140, 96, 0.12);
+}
+
+.shape-2 {
+  bottom: -80px;
+  left: 5%;
+  width: 250px;
+  height: 250px;
+  background: rgba(76, 191, 160, 0.1);
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.hero h1 span {
+  display: inline-block;
+  position: relative;
+}
+
+.hero h1 span::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  border-radius: 4px;
+  background: rgba(245, 200, 66, 0.4);
+}
+
+.hero p {
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-soft);
+}
+
+/* RECIPES */
+.recipes-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 5rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(-6px) rotate(-3deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozinha Feliz 🍋</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/designs/organic/organic.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500;1,9..144,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="app-header"></header>
+    <section class="hero">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <h1>Receitas que <span>aquecam</span> o coração</h1>
+      <p>
+        A cozinha portuguesa da avó, reimaginada com carinho. Porque comer bem é
+        um acto de amor.
+      </p>
+    </section>
+    <div id="filter-bar-container" class="categories-wrap"></div>
+    <div id="style-switcher-container"></div>
+    <div class="recipes-wrap">
+      <div id="recipe-grid" class="recipe-grid"></div>
+    </div>
+    <div class="modal-overlay" id="modal">
+      <div class="modal-bg" onclick="closeModal()"></div>
+      <div class="modal" id="modal-content"></div>
+    </div>
+    <footer id="app-footer"></footer>
+    <script type="module" src="/designs/organic/organic.js"></script>
+  </body>
+</html>
