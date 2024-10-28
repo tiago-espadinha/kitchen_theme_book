@@ -1,0 +1,181 @@
+.recipe-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 4px 20px var(--shadow);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.recipe-card:hover {
+  box-shadow: 0 20px 50px rgba(45, 42, 39, 0.14);
+  transform: translateY(-6px) scale(1.01);
+}
+
+.card-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 1.5rem;
+}
+
+.card-banner.carne {
+  background: var(--card-1);
+}
+
+.card-banner.peixe {
+  background: var(--card-2);
+}
+
+.card-banner.sobremesa {
+  background: var(--card-3);
+}
+
+.card-emoji {
+  font-size: 2.8rem;
+  line-height: 1;
+  animation: wobble 4s ease-in-out infinite;
+}
+
+.card-cat-pill {
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.carne .card-cat-pill {
+  color: var(--peach);
+  background: rgba(255, 140, 96, 0.2);
+}
+
+.peixe .card-cat-pill {
+  color: var(--teal);
+  background: rgba(76, 191, 160, 0.2);
+}
+
+.sobremesa .card-cat-pill {
+  color: var(--lavender);
+  background: rgba(155, 127, 212, 0.2);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  overflow: hidden;
+  min-height: 3.38rem;
+  margin-bottom: 0.8rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+  align-content: center;
+}
+
+.card-chips {
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  background: var(--bg);
+}
+
+.card-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  overflow: hidden;
+  min-height: 4.08rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  align-content: center;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  gap: 0.5rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card-btn::after {
+  content: "→";
+  margin-top: -0.4rem;
+  font-size: 1.6rem;
+}
+
+.card-btn:hover {
+  filter: brightness(0.95);
+}
+
+.recipe-card.carne-card .card-btn {
+  color: var(--peach);
+  background: var(--card-1);
+}
+
+.recipe-card.peixe-card .card-btn {
+  color: var(--teal);
+  background: var(--card-2);
+}
+
+.recipe-card.sobremesa-card .card-btn {
+  color: var(--lavender);
+  background: var(--card-3);
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}

@@ -1,0 +1,259 @@
+.modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 42, 39, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.modal {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  border-radius: 24px;
+  overflow-y: auto;
+  background: var(--white);
+  box-shadow: 0 30px 80px rgba(45, 42, 39, 0.25);
+  animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+  padding: 2rem 2.5rem;
+  border-radius: 24px 24px 0 0;
+}
+
+.modal-banner.carne {
+  background: var(--card-1);
+}
+
+.modal-banner.peixe {
+  background: var(--card-2);
+}
+
+.modal-banner.sobremesa {
+  background: var(--card-3);
+}
+
+.modal-banner-emoji {
+  font-size: 4rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(45, 42, 39, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--white);
+  background: var(--text);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 2rem 2.5rem;
+}
+
+.modal-cat-pill {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.carne-modal .modal-cat-pill {
+  color: var(--peach);
+  background: rgba(255, 140, 96, 0.15);
+}
+
+.peixe-modal .modal-cat-pill {
+  color: var(--teal);
+  background: rgba(76, 191, 160, 0.15);
+}
+
+.sobremesa-modal .modal-cat-pill {
+  color: var(--lavender);
+  background: rgba(155, 127, 212, 0.15);
+}
+
+.modal-title {
+  margin-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.section-label {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.ing-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0;
+  gap: 0.5rem;
+}
+
+.ing-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.ing-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.carne-modal .ing-dot {
+  background: var(--peach);
+}
+
+.peixe-modal .ing-dot {
+  background: var(--teal);
+}
+
+.sobremesa-modal .ing-dot {
+  background: var(--lavender);
+}
+
+.modal-divider {
+  height: 1px;
+  margin: 1.5rem 0;
+  background: var(--bg);
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.carne-modal .step-badge {
+  color: var(--peach);
+  background: rgba(255, 140, 96, 0.15);
+}
+
+.peixe-modal .step-badge {
+  color: var(--teal);
+  background: rgba(76, 191, 160, 0.15);
+}
+
+.sobremesa-modal .step-badge {
+  color: var(--lavender);
+  background: rgba(155, 127, 212, 0.15);
+}
+
+.step-text {
+  padding-top: 0.2rem;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.notes-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.2rem 1.5rem;
+  border: 2px dashed rgba(245, 200, 66, 0.5);
+  border-radius: 16px;
+  gap: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: #fffbf0;
+}
+
+.notes-icon {
+  margin-top: -2px;
+  font-size: 1.2rem;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ing-list {
+    grid-template-columns: 1fr;
+  }
+}

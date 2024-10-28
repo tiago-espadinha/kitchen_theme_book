@@ -1,0 +1,52 @@
+<div class="filter-section">
+  <div class="filter-header">
+    <h2>Nossas Coleções</h2>
+  </div>
+  <div class="filter-controls">
+    <div class="categories-pills">
+      <button
+        class="pill active"
+        data-category="all"
+        onclick="filterRecipes('all', this)"
+      >
+        Tudo
+      </button>
+      <button
+        class="pill"
+        data-category="carne"
+        onclick="filterRecipes('carne', this)"
+      >
+        Carnes
+      </button>
+      <button
+        class="pill"
+        data-category="peixe"
+        onclick="filterRecipes('peixe', this)"
+      >
+        Peixe
+      </button>
+      <button
+        class="pill"
+        data-category="sobremesa"
+        onclick="filterRecipes('sobremesa', this)"
+      >
+        Doces
+      </button>
+      <button
+        class="pill"
+        data-category="geral"
+        onclick="filterRecipes('geral', this)"
+      >
+        Geral
+      </button>
+    </div>
+    <div class="search-field">
+      <input
+        type="text"
+        placeholder="Procurar um sabor..."
+        oninput="handleSearch(this.value)"
+      />
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
+</div>
