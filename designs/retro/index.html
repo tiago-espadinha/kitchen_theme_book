@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livro de Cozinha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/designs/retro/retro.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page-frame">
+      <!-- MASTHEAD -->
+      <div class="masthead">
+        <div class="masthead-top" id="app-header"></div>
+        <div id="filter-bar-container"></div>
+      </div>
+      <div id="style-switcher-container"></div>
+      <!-- CONTENT -->
+      <div class="content">
+        <div class="chapter-head">
+          <div class="chapter-label">Capítulo em destaque</div>
+          <div class="chapter-title" id="chapter-title">Todas as Receitas</div>
+          <div class="chapter-rule"></div>
+        </div>
+        <div id="recipe-grid"></div>
+      </div>
+      <!-- FOOTER -->
+      <div class="page-footer" id="app-footer"></div>
+    </div>
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal-backdrop" onclick="closeModal()"></div>
+      <div class="modal" id="modal-content"></div>
+    </div>
+    <script type="module" src="/designs/retro/retro.js"></script>
+  </body>
+</html>

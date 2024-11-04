@@ -1,0 +1,126 @@
+@import "components/AppHeader/AppHeader.css";
+@import "components/AppFooter/AppFooter.css";
+@import "components/FilterBar/FilterBar.css";
+@import "components/RecipeCard/RecipeCard.css";
+@import "components/RecipeModal/RecipeModal.css";
+@import "components/StyleSwitcher/StyleSwitcher.css";
+
+:root {
+  --parchment: #f5edd8;
+  --parchment-dark: #ede0c4;
+  --ink: #2c1a0e;
+  --faded-ink: #5c4030;
+  --red: #9b2335;
+  --green: #3a6b35;
+  --gold: #b8860b;
+  --rule: rgba(44, 26, 14, 0.2);
+  --page: #fbf5e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  color: var(--ink);
+  background: var(--parchment-dark);
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* OUTER FRAME */
+.page-frame {
+  position: relative;
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--page);
+  box-shadow:
+    0 0 60px rgba(44, 26, 14, 0.3),
+    inset 0 0 30px rgba(44, 26, 14, 0.04);
+}
+
+.page-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--red) 0,
+    var(--red) 12px,
+    var(--gold) 12px,
+    var(--gold) 24px,
+    var(--green) 24px,
+    var(--green) 36px,
+    var(--parchment-dark) 36px,
+    var(--parchment-dark) 48px
+  );
+}
+
+/* HEADER / MASTHEAD */
+.masthead {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  padding: 3rem 4rem 2rem;
+  border-bottom: 3px double var(--rule);
+  background: var(--page);
+}
+
+/* CONTENT */
+.content {
+  padding: 0 4rem 4rem;
+}
+
+/* Chapter heading */
+.chapter-head {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.chapter-label {
+  margin-bottom: 0.5rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.65rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.chapter-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.chapter-rule {
+  width: 200px;
+  height: 1px;
+  margin: 1.2rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* RECIPE GRID - newspaper columns */
+.recipe-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+
+/* Borders between rows */
+.recipe-row {
+  border-bottom: 1px solid var(--rule);
+}
+
+.recipe-row:last-child {
+  border-bottom: none;
+}

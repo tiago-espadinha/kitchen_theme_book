@@ -1,0 +1,19 @@
+#app-footer {
+  padding: 2rem 4rem;
+  border-top: 3px double var(--rule);
+  text-align: center;
+}
+
+.footer-ornament {
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.5rem;
+}
+
+.footer-text {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--faded-ink);
+}
