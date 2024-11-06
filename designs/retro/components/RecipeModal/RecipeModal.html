@@ -1,0 +1,23 @@
+<div class="modal-inner">
+  <div class="modal-header-top">
+    <div class="modal-recipe-label">
+      Receita N.º {{displayIndex}} — {{categoryLabel}}
+    </div>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <h2 class="modal-title">{{title}}</h2>
+  <div class="modal-rule">✦</div>
+  <div class="modal-columns">
+    <div>
+      <div class="modal-section-header">Ingredientes</div>
+      <ul class="ing-list">
+        {{ingredientsLI}}
+      </ul>
+    </div>
+    <div>
+      <div class="modal-section-header">Modo de Preparação</div>
+      <div class="step-list">{{stepsROMAN}}</div>
+    </div>
+    {{notesHTML}}
+  </div>
+</div>

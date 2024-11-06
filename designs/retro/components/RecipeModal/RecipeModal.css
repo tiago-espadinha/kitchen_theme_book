@@ -1,0 +1,251 @@
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 26, 14, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--page);
+  box-shadow:
+    0 20px 80px rgba(44, 26, 14, 0.4),
+    8px 8px 0 var(--parchment-dark);
+  animation: bookOpen 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--red) 0,
+    var(--red) 8px,
+    var(--gold) 8px,
+    var(--gold) 16px,
+    var(--green) 16px,
+    var(--green) 24px,
+    var(--parchment-dark) 24px,
+    var(--parchment-dark) 32px
+  );
+}
+
+.modal-inner {
+  padding: 3rem;
+}
+
+.modal-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.modal-recipe-label {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--rule);
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.8rem;
+  color: var(--faded-ink);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  border-color: var(--red);
+  color: white;
+  background: var(--red);
+}
+
+.modal-title {
+  margin-bottom: 0.5rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.modal-rule {
+  position: relative;
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+.modal-rule::before,
+.modal-rule::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.modal-rule::before {
+  left: 0;
+}
+
+.modal-rule::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.modal-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 3rem;
+  padding: 0;
+}
+
+.modal-section-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--parchment-dark);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.ing-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.ing-list li {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted var(--rule);
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--faded-ink);
+}
+
+.ing-list li::before {
+  content: "—";
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--gold);
+}
+
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.step-roman {
+  flex-shrink: 0;
+  min-width: 2rem;
+  padding-top: 0.2rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--gold);
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+.step-rule {
+  flex-shrink: 0;
+  width: 1px;
+  background: var(--rule);
+}
+
+.step-text {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.modal-note {
+  grid-column: 1 / -1;
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  background: rgba(184, 134, 11, 0.04);
+}
+
+.modal-note-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.modal-note-text {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--faded-ink);
+}
+
+@keyframes bookOpen {
+  from {
+    transform: perspective(1000px) rotateY(-15deg) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(1000px) rotateY(0) scale(1);
+    opacity: 1;
+  }
+}
