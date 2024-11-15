@@ -169,7 +169,7 @@
   letter-spacing: 0.02em;
 }
 
-.note-block {
+.notes-box {
   background: rgba(230, 188, 0, 0.05);
   border: 1px solid var(--yellow);
   /* border-left: 4px solid var(--red); */
@@ -180,3 +180,10 @@
   letter-spacing: 0.02em;
 }
 
+.notes-box strong {
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  margin-right: 0.5rem;
+}

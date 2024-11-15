@@ -222,7 +222,7 @@
   color: var(--text);
 }
 
-.notes-card {
+.notes-box {
   display: flex;
   align-items: flex-start;
   padding: 1.2rem 1.5rem;
@@ -233,11 +233,17 @@
   line-height: 1.65;
   color: var(--text);
   background: #fffbf0;
+  margin-top: 1.5rem;
 }
 
-.notes-icon {
+.notes-box::before {
+  content: "📝";
   margin-top: -2px;
   font-size: 1.2rem;
+}
+
+.notes-box strong {
+  display: none;
 }
 
 @keyframes popIn {
