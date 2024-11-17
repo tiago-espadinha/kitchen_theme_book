@@ -12,6 +12,30 @@ This project is a recipe book site with four visual designs:
 
 Each style is implemented as a separate template under `designs/`, while the core logic and recipe database remain shared.
 
+## Preview
+
+### Main entry and style gallery
+
+![Homepage preview](assets/home.png)
+
+### Design previews
+
+- **Editorial**
+  - ![Editorial preview 1](assets/editorial_1.png)
+  - ![Editorial preview 2](assets/editorial_2.png)
+  - ![Editorial preview 3](assets/editorial_3.png)
+- **Brutalist**
+  - ![Brutalist preview 1](assets/brutalist_1.png)
+  - ![Brutalist preview 2](assets/brutalist_2.png)
+  - ![Brutalist preview 3](assets/brutalist_3.png)
+- **Organic**
+  - ![Organic preview 1](assets/organic_1.png)
+  - ![Organic preview 2](assets/organic_2.png)
+  - ![Organic preview 3](assets/organic_3.png)
+- **Retro**
+  - ![Retro preview 1](assets/retro_1.png)
+  - ![Retro preview 2](assets/retro_2.png)
+
 ## What’s Included
 
 - `database/`: JSON recipe data organized by category.
