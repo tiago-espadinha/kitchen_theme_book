@@ -177,3 +177,40 @@
   font-size: 0.95rem;
   color: rgba(26, 18, 8, 0.7);
 }
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+  }
+
+  .modal {
+    max-height: 100vh;
+    height: 100%;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  .modal-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.8rem;
+  }
+
+  .modal-body {
+    padding: 2rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .step-num {
+    min-width: 1.5rem;
+    font-size: 1.2rem;
+  }
+}

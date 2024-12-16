@@ -38,3 +38,18 @@
   color: rgba(247, 241, 232, 0.5);
   letter-spacing: 0.08em;
 }
+
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 0 1.5rem;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .header-tagline {
+    display: none;
+  }
+}

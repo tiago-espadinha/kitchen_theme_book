@@ -105,3 +105,22 @@
 .recipe-card:hover .card-cta::after {
   transform: translateX(4px);
 }
+
+@media (max-width: 768px) {
+  .recipe-card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    min-height: auto;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-meta {
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}
