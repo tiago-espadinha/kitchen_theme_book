@@ -125,3 +125,22 @@
   margin-top: -0.8rem;
   font-size: 2rem;
 }
+
+@media (max-width: 768px) {
+  .recipe-card {
+    padding: 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    min-height: auto;
+  }
+
+  .card-body-text {
+    min-height: auto;
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+}

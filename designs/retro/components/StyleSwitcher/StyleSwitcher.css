@@ -44,3 +44,36 @@
   color: var(--page);
   background: var(--gold);
 }
+
+@media (max-width: 768px) {
+  .style-switcher {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    box-shadow: 0 -4px 20px rgba(44, 26, 14, 0.1);
+  }
+
+  .switcher-label {
+    margin-bottom: 0;
+    border-bottom: none;
+    font-size: 8px;
+    white-space: nowrap;
+  }
+
+  .switcher-buttons {
+    gap: 5px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .switcher-buttons button {
+    padding: 4px 8px;
+    font-size: 8px;
+    white-space: nowrap;
+  }
+}

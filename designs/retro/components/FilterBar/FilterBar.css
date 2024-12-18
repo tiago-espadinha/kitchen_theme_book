@@ -106,3 +106,36 @@
   font-size: 0.6rem;
   color: var(--gold);
 }
+
+@media (max-width: 768px) {
+  .section-header {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .cat-btn {
+    height: 2rem;
+    padding: 0 0.8rem;
+    font-size: 0.6rem;
+  }
+
+  .search-box {
+    min-width: 100%;
+  }
+
+  .search-box input {
+    height: 2.2rem;
+    font-size: 0.9rem;
+  }
+}

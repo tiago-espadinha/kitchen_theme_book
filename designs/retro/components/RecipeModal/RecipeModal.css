@@ -249,3 +249,40 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0;
+  }
+
+  .modal {
+    max-width: none;
+    max-height: 100vh;
+    height: 100%;
+    box-shadow: none;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .modal-inner {
+    padding: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.6rem;
+  }
+
+  .modal-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .modal-rule::before,
+  .modal-rule::after {
+    width: 20%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
