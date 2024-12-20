@@ -48,3 +48,22 @@
     transform: translateY(-3px);
   }
 }
+
+@media (max-width: 768px) {
+  #app-header {
+    padding: 0 1rem;
+  }
+
+  .header-inner {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logo-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
