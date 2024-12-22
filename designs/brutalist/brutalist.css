@@ -165,3 +165,53 @@ body::before {
   gap: 0;
   border: 1px solid rgba(240, 237, 232, 0.1);
 }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero-left {
+    padding: 3rem 2rem;
+  }
+
+  .hero-stat {
+    padding: 1.5rem;
+  }
+
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    border-right: none;
+    border-bottom: 3px solid var(--white);
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-right {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-stat {
+    padding: 1.5rem;
+  }
+
+  .hero-stat-num {
+    font-size: 3rem;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    border: none;
+  }
+}

@@ -36,3 +36,36 @@
   background: var(--yellow);
   color: var(--black);
 }
+
+@media (max-width: 768px) {
+  .style-switcher {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    border: none;
+    border-top: 3px solid var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .switcher-label {
+    margin-bottom: 0;
+    font-size: 8px;
+    white-space: nowrap;
+  }
+
+  .switcher-buttons {
+    gap: 5px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .switcher-buttons button {
+    padding: 3px 6px;
+    font-size: 8px;
+    white-space: nowrap;
+  }
+}

@@ -63,3 +63,40 @@
   outline: none;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .categories-bar {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .cat-label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .cat-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .search-wrap {
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .search-wrap .cat-label{
+    margin: 0;
+    max-width: 80px;
+  }
+}

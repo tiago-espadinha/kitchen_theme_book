@@ -53,3 +53,20 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 768px) {
+  #app-header {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    padding-right: 0;
+    border-right: none;
+    margin: 0 auto;
+    font-size: 1.8rem;
+  }
+
+  .nav-ticker {
+    display: none;
+  }
+}
